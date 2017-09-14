@@ -16,8 +16,8 @@ namespace CSharp_rpgGame
             int killed = 0;
             //attack styles
             int[] chop = new int[2];
-            chop[0] = 50;
-            chop[1] = 80;
+            chop[0] = 50; //first number == attack damage
+            chop[1] = 80; //second number == stamina drain
             int[] slash = new int[2];
             slash[0] = 30;
             slash[1] = 40;
@@ -27,6 +27,10 @@ namespace CSharp_rpgGame
             int[] guard = new int[2];
             guard[0] = 0;
             guard[1] = -40;
+            int[] heal = new int[3];
+            guard[0] = 0;
+            guard[1] = 30;
+            guard[2] = 30; //heal amount
 
             Console.WriteLine("What is your name?");
             string playerName = Console.ReadLine();
@@ -51,12 +55,13 @@ namespace CSharp_rpgGame
                     Console.WriteLine("Slash: " + slash[0] + " Damage " + slash[1] + " Stamina Drain");
                     Console.WriteLine("Stab: " + stab[0] + " Damage " + stab[1] + " Stamina Drain");
                     Console.WriteLine("Guard: " + guard[0] + " Damage " + guard[1] + " Stamina Drain");
+                    Console.WriteLine("Heal: " + heal[2] + " HP gain " + heal[1] + " Stamina Drain");
                     Console.WriteLine(" ");
                     Console.WriteLine("Your Stats:");
                     Console.WriteLine(playerHealth + " HP " + playerStamina + " Stamina");
                     Console.WriteLine(" ");
                     string playerAction = Console.ReadLine();
-                    if(playerAction == "Chop" && playerStamina >= chop[1]) //checks what action the player does
+                    if (playerAction == "Chop" && playerStamina >= chop[1]) //checks what action the player does
                     {
                         playerStamina -= chop[1];
                         monster[0] -= chop[0];
@@ -74,7 +79,12 @@ namespace CSharp_rpgGame
                     else if (playerAction == "Guard")
                     {
                         playerStamina -= guard[1];
-                        monster[0] -= stab[0];
+                        monster[0] -= guard[0];
+                    }
+                    else if (playerAction == "Heal")
+                    {
+                        playerStamina -= heal[1];
+                        playerHealth += heal[2];
                     }
                     else //if player writes something invalid
                     {
