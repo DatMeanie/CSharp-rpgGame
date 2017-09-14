@@ -1,0 +1,7 @@
+C:\github\CSharp-rpgGame\CSharp-rpgGame\bin\Debug\CSharp-rpgGame.exe.config
+C:\github\CSharp-rpgGame\CSharp-rpgGame\bin\Debug\CSharp-rpgGame.exe
+C:\github\CSharp-rpgGame\CSharp-rpgGame\bin\Debug\CSharp-rpgGame.pdb
+C:\github\CSharp-rpgGame\CSharp-rpgGame\obj\Debug\CSharp-rpgGame.csprojResolveAssemblyReference.cache
+C:\github\CSharp-rpgGame\CSharp-rpgGame\obj\Debug\CSharp-rpgGame.csproj.CoreCompileInputs.cache
+C:\github\CSharp-rpgGame\CSharp-rpgGame\obj\Debug\CSharp-rpgGame.exe
+C:\github\CSharp-rpgGame\CSharp-rpgGame\obj\Debug\CSharp-rpgGame.pdb
